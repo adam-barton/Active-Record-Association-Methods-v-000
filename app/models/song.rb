@@ -8,6 +8,8 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     # when this method is called it should assign the song's artist to Drake
-    "Drake".songs << self
+    Artists.all.each do |artist|
+      artist.name == Drake
+    artist.songs << self
   end
 end
